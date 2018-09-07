@@ -2,6 +2,14 @@ plugins {
     id 'java-library'
 }
 
+/*
+ * I did not find *variant* support for Java builds, so will simply use
+ * an environment variable for passing in the variant
+ * example:
+ *     DEPS=latest ./gradlew build
+ */
+String DEPS = System.getenv('DEPS')
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
