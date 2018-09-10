@@ -3,16 +3,19 @@ package prop
 import groovy.lang.Closure
 
 class Deps {
+    def api = []
+    def implementation = []
+    def testImplementation = []
     
     def api(dep) {
-        println "api: "+dep
+        api << dep
     }
     
     def implementation(dep) {
-        println "implementation: "+dep
+        implementation << dep
     }
     
     def testImplementation(dep) {
-        println "testImplementation: "+dep
+        testImplementation << dep
     }
 }
