@@ -23,6 +23,10 @@ deps.with {
     testImplementation 'junit:junit:4.12'
 }
 
+if ('latest' == DEPS) {
+    deps.useLatest()
+}
+
 dependencies {
     for (dependency in deps.api) {
         api dependency
